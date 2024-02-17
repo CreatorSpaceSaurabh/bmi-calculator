@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import './bmi.css'
+import logo from '../assets/logo.png'
 
 const Bmi = () => {
     const [weight, setWeight] = useState(0)
@@ -40,6 +41,7 @@ const Bmi = () => {
 
   return (
     <div className="bmi">
+    <img src={logo} alt="logo" width={"380px"} height={"130px"}/>
     <div className='container'>
       <h2 className='center'>BMI Calculator</h2>
       <form onSubmit={calcBmi}>
@@ -55,16 +57,21 @@ const Bmi = () => {
         </div>
  
         <div>
-          <button className='btn' type='submit'>Submit</button>
-          <button className='btn btn-outline' onClick={reload} type='submit'>Reload</button>
+          <button className='btn' type='submit' name='submit'>Submit</button>
+          <button className='btn btn-outline' name='reload' onClick={reload} >Reload</button>
         </div>
       </form>
  
-      <div className='center'>
+      {message?.length > 0 && <div className='center'>
         <h3>Your BMI is: {bmi}</h3>
         <p>{message}</p>
-      </div>
+      </div>}
+      <div className="copyright">
+            <p className="p-text">@2024 CreatorSpaceSaurabh</p>
+            <p className="p-text">All rights reserved</p>
+          </div>
     </div>
+    
   </div>
   );
 }
