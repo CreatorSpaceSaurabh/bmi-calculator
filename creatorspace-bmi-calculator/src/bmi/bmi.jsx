@@ -44,20 +44,20 @@ const Bmi = () => {
     <img src={logo} alt="logo" width={"380px"} height={"130px"}/>
     <div className='container'>
       <h2 className='center'>BMI Calculator</h2>
-      <form onSubmit={calcBmi}>
- 
+      {/* onSubmit={calcBmi} */}
+      <form>
         <div>
           <label>Weight (lbs)</label>
-          <input value={weight} onChange={(e) => setWeight(e.target.value)} />
+          <input type='number' value={weight} onChange={(e) => setWeight(e.target.value)} />
         </div>
  
         <div>
           <label>Height (in)</label>
-          <input value={height} onChange={(event) => setHeight(event.target.value)} />
+          <input type='number' value={height} onChange={(event) => setHeight(event.target.value)} />
         </div>
  
         <div>
-          <button className='btn' type='submit' name='submit'>Submit</button>
+          <button className='btn' type='submit' name='submit' onClick={calcBmi}>Submit</button>
           <button className='btn btn-outline' name='reload' onClick={reload} >Reload</button>
         </div>
       </form>
