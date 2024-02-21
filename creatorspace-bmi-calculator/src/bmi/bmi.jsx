@@ -48,12 +48,12 @@ const Bmi = () => {
       <form>
         <div>
           <label>Weight (lbs)</label>
-          <input type='number' value={weight} onChange={(e) => setWeight(e.target.value)} />
+          <input type='number' name="weight" value={weight} onChange={(e) => setWeight(e.target.value)} />
         </div>
  
         <div>
           <label>Height (in)</label>
-          <input type='number' value={height} onChange={(event) => setHeight(event.target.value)} />
+          <input type='number' name="height" value={height} onChange={(event) => setHeight(event.target.value)} />
         </div>
  
         <div>
