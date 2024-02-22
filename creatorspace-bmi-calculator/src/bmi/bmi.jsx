@@ -21,11 +21,12 @@ const Bmi = () => {
         // Logic for message
    
         if (bmi < 25) {
-          setMessage('You are underweight')
+          setMessage('Your weight is in the Underweight category')
         } else if (bmi >= 25 && bmi < 30) {
-          setMessage('You are a healthy weight')
+          // setMessage('You are a healthy weight')
+          setMessage('Your weight is in the Healthy Weight category')
         } else {
-          setMessage('You are overweight')
+          setMessage('Your weight is in the Overweight category')
         }
       }
     }
